@@ -9,6 +9,10 @@ import { NavigationContainer, DefaultTheme} from "@react-navigation/native";
 
 //screens
 import {Onboarding, DestinationDetail} from "./screens";
+// Tabs
+import Tabs from "./navigation/tabs"
+import {COLORS, SIZES, icons} from "./constants";
+
 
 const theme ={
     ...DefaultTheme,
@@ -24,7 +28,7 @@ const App = () => {
     return (
         <NavigationContainer theme={theme}>
           <Stack.Navigator
-              initialRouteName("")
+              initialRouteName={"Onboarding"}
           >
             {/* Screens */}
             <Stack.Screen 
@@ -54,6 +58,48 @@ const App = () => {
                    }
                }}
             />
+            {/* Tabs */}
+            <Stack.Screen
+                name = "Home"
+                component={Tabs}
+                options ={{
+                    title: null,
+                    headerStyle: {
+                        backgroundColor: COLORS.white
+
+                    },
+                    headerLeft: ({ onPress }) => (
+                        <TouchableOpacity
+                            style={{ marginLeft: SIZES.padding }}
+                            onPress = {onPress}
+                        >
+                            <Image 
+                                source ={icons.back}
+                                resizeMode = "contain"
+                                style = {{
+                                    width: 25,
+                                    height: 25,
+                                }}
+                            />
+                        </TouchableOpacity>
+                    ),
+                    headerRight: () => (
+                        <TouchableOpacity
+                            style ={{ marginRight: SIZES.padding}}
+                            onPress = {() => console.log("Menu")}
+                         >
+                             <Image 
+                                 source = {icons.menu}
+                                 resizeMode = "contain"
+                                 style ={{
+                                     width: 25,
+                                     height: 25
+                                 }}
+                             />
+                        </TouchableOpacity>
+                    ),
+                }}
+             />
           </Stack.Navigator>
         </NavigationContainer>
 
