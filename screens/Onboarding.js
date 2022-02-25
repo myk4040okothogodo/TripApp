@@ -7,8 +7,8 @@ import {
     TouchableOpacity,
     Text,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import {COLORS, SIZES, icons} from "../constants";
+import {LinearGradient} from 'expo-linear-gradient';
+import {images ,FONTS, COLORS, SIZES, icons} from "../constants";
 const Onboarding = ({ navigation }) => {
     return (
       <SafeAreaView style={styles.container}>
@@ -37,7 +37,7 @@ const Onboarding = ({ navigation }) => {
                      start = {{ x: 0, y:0 }}
                      end = {{ x: 1, y:1 }}
                   >
-                      <Text style={{ color: COLORS.white, ...FONTS.h3}}></Text>
+                      <Text style={{ color: COLORS.white, ...FONTS.h3}}>Start !</Text>
                  </LinearGradient>
             </TouchableOpacity>
         </View> 

@@ -1,4 +1,4 @@
-export const airplane = require("../assets/iocns/airplane_icon.png")
+export const airplane = require("../assets/icons/airplane_icon.png")
 export const back = require("../assets/icons/back_icon.png");
 export const barMenu = require("../assets/icons/bar_menu_icon.png");
 export const bed = require("../assets/icons/bed_icon.png");

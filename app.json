@@ -1,4 +1,7 @@
 {
+  "expo": {
+    "appKey":"TripBookingApp",
+  },
   "name": "TripBookingApp",
   "displayName": "TripBookingApp"
 }

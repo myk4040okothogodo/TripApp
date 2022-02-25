@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home } from "../screens/";
-
+import {FONTS, COLORS, SIZES, icons} from "../constants";
 const Tab = createBottomTabNavigator();
 
 const tabOptions = {
@@ -97,10 +97,8 @@ const Tabs =() =>{
               name="Account"
               component={Home}
           />
-
         </Tab.Navigator>
+    );
+};
 
-
-    )
-
-}
+export default Tabs;
